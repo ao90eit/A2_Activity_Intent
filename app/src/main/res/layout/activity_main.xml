@@ -119,11 +119,11 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Total-> "
+        android:text="Total -> "
         android:textAlignment="viewEnd"
         android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/completeorder_button"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_50"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_55"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -136,7 +136,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/completeorder_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/vertical_50" />
+        app:layout_constraintStart_toStartOf="@+id/vertical_55" />
 
     <Button
         android:id="@+id/completeorder_button"
@@ -162,7 +162,7 @@
         />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertical_50"
+        android:id="@+id/vertical_55"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"

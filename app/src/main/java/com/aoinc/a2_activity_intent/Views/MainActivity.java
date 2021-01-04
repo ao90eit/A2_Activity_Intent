@@ -4,7 +4,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,10 +18,13 @@ public class MainActivity extends AppCompatActivity {
     private ImageView foodItem1_image;
     private TextView foodTitle1_text;
     private TextView foodPrice1_text;
+    private TextView amount1_text;
     private TextView special1_text;
 
     // menu food item image
     private ImageView menuItem1_image;
+    private ImageView menuItem2_image;
+    private ImageView menuItem3_image;
     private final int REQUEST_CODE = 1337;
 
     private Button completeOrder_button;
@@ -36,7 +38,25 @@ public class MainActivity extends AppCompatActivity {
         menuItem1_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Food1.class);
+                Intent intent = new Intent(MainActivity.this, MenuFoodItem1.class);
+                startActivityForResult(intent, REQUEST_CODE);
+            }
+        });
+
+        menuItem2_image = findViewById(R.id.menuitem2_image);
+        menuItem2_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MenuFoodItem2.class);
+                startActivityForResult(intent, REQUEST_CODE);
+            }
+        });
+
+        menuItem3_image = findViewById(R.id.menuitem3_image);
+        menuItem3_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MenuFoodItem3.class);
                 startActivityForResult(intent, REQUEST_CODE);
             }
         });
@@ -44,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         foodItem1_image = findViewById(R.id.food1_image);
         foodTitle1_text = findViewById(R.id.foodtitle1_textview);
         foodPrice1_text = findViewById(R.id.foodprice1_textview);
+        amount1_text = findViewById(R.id.foodamount1_textview);
         special1_text = findViewById(R.id.special1_textview);
 
         completeOrder_button = findViewById(R.id.completeorder_button);
@@ -54,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 foodTitle1_text.setText(null);
                 foodPrice1_text.setText(null);
                 special1_text.setText(null);
+                amount1_text.setText(null);
             }
         });
     }
@@ -63,11 +85,12 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == REQUEST_CODE){
-            FoodMenuItem foodMenuItem = (FoodMenuItem) data.getSerializableExtra(Food1.DATA_TAG);
+            FoodMenuItem foodMenuItem = (FoodMenuItem) data.getSerializableExtra(MenuFoodItem1.DATA_TAG);
 
             foodItem1_image.setImageResource(foodMenuItem.getImageResourceID());
             foodTitle1_text.setText(foodMenuItem.getFoodName());
             foodPrice1_text.setText(String.valueOf(foodMenuItem.getFoodPrice()));
+            amount1_text.setText("(" + String.valueOf(foodMenuItem.getFoodAmount()) + ")");
             special1_text.setText(foodMenuItem.getSpecialInstructions());
         }
     }

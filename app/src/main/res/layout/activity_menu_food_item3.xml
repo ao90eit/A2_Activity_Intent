@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.MenuFoodItem1">
+    tools:context=".Views.MenuFoodItem3">
 
     <ImageView
         android:id="@+id/food_imageview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:src="@drawable/zucchini_pasta"
+        android:src="@drawable/pudding_pie"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_30"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,7 +19,7 @@
         android:id="@+id/title_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Zucchini Ribbon Pasta"
+        android:text="Chocolate Pudding Pie"
         android:textAlignment="center"
         android:textSize="32sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
         android:id="@+id/description_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="For people who want to emulate pasta without having to eat pasta. Ain't zucchini grand?"
+        android:text="Chocolcate, peanut butter, pudding, more chocolate. A sugar high in a lovely pie!"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title_textview" />
