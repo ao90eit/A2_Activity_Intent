@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.Food1">
+
+    <ImageView
+        android:id="@+id/food_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/zucchini_pasta"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zucchini Ribbon Pasta"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/food_imageview" />
+
+    <TextView
+        android:id="@+id/description_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Meanwhile, slice off ends of zucchini and discard. Cut zucchini in half lengthwise. Using a mandoline, or carefully with a sharp knife, slice zucchini into very thin (about 1/"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_textview" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/amount"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="62dp"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:text="Amount:"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/vertical_50"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/description_textview" />-->
+
+<!--    <NumberPicker-->
+<!--        android:id="@+id/numberPicker"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="62dp"-->
+<!--        android:gravity="center_vertical"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/vertical_50"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/amount"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/description_textview" />-->
+
+    <TextView
+        android:id="@+id/price_textview"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:gravity="center_vertical"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"
+        android:text="$ 6.95"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vertical_50"
+        app:layout_constraintTop_toBottomOf="@id/description_textview" />
+
+    <EditText
+        android:id="@+id/special_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Special Instructions"
+        app:layout_constraintBottom_toTopOf="@+id/addtoorder_button"
+        app:layout_constraintTop_toBottomOf="@id/price_textview"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/addtoorder_button"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Add To Order" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".65" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

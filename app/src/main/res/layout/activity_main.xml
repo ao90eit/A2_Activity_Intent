@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.MainActivity">
+
+    <TextView
+        android:id="@+id/menutitle_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menuitem1_image"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:src="@drawable/zucchini_pasta"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menutitle_textview" />
+
+    <ImageView
+        android:id="@+id/menuitem2_image"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:src="@drawable/tuna_bowl"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_66"
+        app:layout_constraintStart_toStartOf="@+id/vertical_33"
+        app:layout_constraintTop_toBottomOf="@+id/menutitle_textview" />
+
+    <ImageView
+        android:id="@+id/menuitem3_image"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:src="@drawable/pudding_pie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vertical_66"
+        app:layout_constraintTop_toBottomOf="@+id/menutitle_textview" />
+
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_35"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
+        android:text="Your Order"
+        android:textStyle="bold"
+        android:textSize="48sp"
+        />
+
+    <ImageView
+        android:id="@+id/food1_image"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_textview" />
+
+<!--    android:src="@drawable/zucchini_pasta"-->
+
+    <TextView
+        android:id="@+id/foodtitle1_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/foodprice1_textview"
+        app:layout_constraintStart_toStartOf="@+id/vertical_33"
+        app:layout_constraintTop_toBottomOf="@+id/title_textview" />
+
+<!--    android:text="Zucchini Ribbon Pasta"-->
+
+    <TextView
+        android:id="@+id/foodprice1_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewEnd"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_textview"
+        />
+
+    <TextView
+        android:id="@+id/special1_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/food1_image"
+        app:layout_constraintEnd_toStartOf="@+id/foodamount1_textview"
+        app:layout_constraintStart_toStartOf="@+id/vertical_33"
+        app:layout_constraintTop_toBottomOf="@+id/foodtitle1_textview" />
+
+    <TextView
+        android:id="@+id/foodamount1_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="viewEnd"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodprice1_textview" />
+
+<!--    android:text="Special instructions go here"-->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Total-> "
+        android:textAlignment="viewEnd"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/completeorder_button"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_50"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/totalcost_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="$00.00"
+        android:textAlignment="viewEnd"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/completeorder_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vertical_50" />
+
+    <Button
+        android:id="@+id/completeorder_button"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Complete Order" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_35"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".35"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_33"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".33"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_50"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_66"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".66"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
