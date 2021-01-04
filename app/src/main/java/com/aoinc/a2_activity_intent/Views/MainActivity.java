@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView menuItem3_image;
     private final int REQUEST_CODE = 1337;
 
+    private TextView totalPrice;
+
     private Button completeOrder_button;
 
     @Override
@@ -67,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
         amount1_text = findViewById(R.id.foodamount1_textview);
         special1_text = findViewById(R.id.special1_textview);
 
+        totalPrice = findViewById(R.id.totalcost_textview);
+
         completeOrder_button = findViewById(R.id.completeorder_button);
         completeOrder_button.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -92,6 +96,9 @@ public class MainActivity extends AppCompatActivity {
             foodPrice1_text.setText(String.valueOf(foodMenuItem.getFoodPrice()));
             amount1_text.setText("(" + String.valueOf(foodMenuItem.getFoodAmount()) + ")");
             special1_text.setText(foodMenuItem.getSpecialInstructions());
+
+            // TODO: calculate price of all items in list when more than one
+            totalPrice.setText("$ " + foodPrice1_text.getText().toString());
         }
     }
 }
